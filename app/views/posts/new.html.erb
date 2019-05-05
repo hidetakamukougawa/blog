@@ -1,0 +1,13 @@
+<%= form_for @post do |f| %>
+  <div style="margin: 8px 0">
+    <%= f.label :新規投稿, style: { 'margin-right' => 8 } %>
+    <%= f.text_area :text, placeholder: '書きたいことを書いてください', style: 'width: 100%;height: 300px;' %>
+  </div>
+  <div class="row">
+    <div class="col10 push1">
+      <%= button_tag type: "submit", class: "btn btn--block" do %>
+      投稿する<i class="icon-arrow-right"></i>
+      <% end %>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,15 @@
+<div class="card blue-grey darken-1">
+  <div class="card-content white-text">
+    <p>
+      <%= simple_format(post.text) %>
+    </p>
+  </div>
+
+  <div class="card-action">
+  <% if user_signed_in? && current_user.id == post.user_id %>
+    <%= link_to '削除', "/posts/#{post.id}", method: :delete %>
+    <%= link_to '編集', edit_post_path(post) %>
+    <%# <%= link_to '編集', "/posts/#{post.id}/edit", method: :get %>
+  <% end %>
+  </div>
+</div>

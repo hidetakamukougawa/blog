@@ -1,0 +1,12 @@
+<div class="center">
+<div class="row">
+  <div class="col s12 m6">
+  <% @posts.each do |post| %>
+    <%= render partial: "post", locals: { post: post } %>
+  <% end %>
+  <%= paginate(@posts) %>
+</div>
+</div>
+</div>
+
+<script type="text/javascript" src="./app.js"></script>
